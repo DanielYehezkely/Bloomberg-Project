@@ -17,6 +17,7 @@ html {
 }
 
 body {
+  height: 165rem;
   font-weight: 400;
   line-height: 1.6;
   font-family: var(--primary-font);
@@ -268,4 +269,224 @@ a {
   opacity: 1;
 }
 
+/* Main----------------------------------------------------------------*/
 
+.main-container {
+  height: 142rem;
+  width: 123rem;
+  margin: 0 14.46rem;
+  border: var(--Primary-color) solid 0.1rem;
+  border-top: none;
+  border-bottom: none;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "top-sec top-sec top-sec top-sec top-sec top-sec top-sec"
+    "top-sec top-sec top-sec top-sec top-sec top-sec top-sec"
+    "top-sec top-sec top-sec top-sec top-sec top-sec top-sec"
+    "top-sec top-sec top-sec top-sec top-sec top-sec top-sec"
+    "top-sec top-sec top-sec top-sec top-sec top-sec top-sec"
+    "left-sec mid-up-sec mid-up-sec mid-up-sec mid-up-sec right-sec right-sec"
+    "left-sec mid-up-sec mid-up-sec mid-up-sec mid-up-sec right-sec right-sec"
+    "left-sec mid-up-sec mid-up-sec mid-up-sec mid-up-sec right-sec right-sec"
+    "left-sec mid-up-sec mid-up-sec mid-up-sec mid-up-sec right-sec right-sec"
+    "left-sec middle-mid-sec middle-mid-sec middle-mid-sec middle-mid-sec right-sec right-sec"
+    "left-sec middle-mid-sec middle-mid-sec middle-mid-sec middle-mid-sec right-sec right-sec"
+    "left-sec middle-mid-sec middle-mid-sec middle-mid-sec middle-mid-sec right-sec right-sec"
+    "left-sec mid-down-sec mid-down-sec mid-down-sec mid-down-sec right-sec right-sec"
+    "left-sec mid-down-sec mid-down-sec mid-down-sec mid-down-sec right-sec right-sec"
+    "left-sec mid-down-sec mid-down-sec mid-down-sec mid-down-sec right-sec right-sec"
+    "left-sec mid-down-sec mid-down-sec mid-down-sec mid-down-sec right-sec right-sec"
+    "left-sec mid-down-sec mid-down-sec mid-down-sec mid-down-sec right-sec right-sec"
+    "left-sec mid-down-sec mid-down-sec mid-down-sec mid-down-sec right-sec right-sec"
+    "left-sec mid-down-sec mid-down-sec mid-down-sec mid-down-sec right-sec right-sec"
+    "left-sec mid-down-sec mid-down-sec mid-down-sec mid-down-sec right-sec right-sec"
+    "left-sec mid-down-sec mid-down-sec mid-down-sec mid-down-sec right-sec right-sec";
+}
+
+/* main-top-section */
+
+.main-top-section {
+  padding: 2rem 1.2rem;
+  grid-area: top-sec;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-areas:
+    "top-sec-img top-sec-img top-sec-headline top-sec-headline top-sec-headline"
+    "top-sec-img top-sec-img top-sec-paragraph top-sec-paragraph top-sec-paragraph";
+}
+
+.main-top-sec-img {
+  padding-top: 0.6rem;
+  width: 38.4rem;
+  grid-area: top-sec-img;
+}
+
+.main-top-sec-headline {
+  width: 79rem;
+  grid-area: top-sec-headline;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.main-top-sec-paragraph {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: top-sec-paragraph;
+  border-bottom: solid var(--Primary-color) 0.1rem;
+}
+
+/* main-left-section--------------- */
+
+.main-left-section {
+  width: 100%;
+  grid-area: left-sec;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 1rem;
+}
+
+.latest-column {
+  margin-bottom: 2rem;
+}
+
+.most-read-column .business-box .subTitle::before {
+  content: "1";
+  font-size: 2.5rem;
+  font-weight: var(--primary-font-weight);
+}
+.most-read-column .technology-box .subTitle::before {
+  content: "2";
+  font-size: 2.5rem;
+  font-weight: var(--primary-font-weight);
+}
+.most-read-column .politics-box .subTitle::before {
+  content: "3";
+  font-size: 2.5rem;
+  font-weight: var(--primary-font-weight);
+}
+
+/* main-middle-up-section */
+
+.main-middle-up-section {
+  width: 100%;
+  grid-area: mid-up-sec;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 3rem;
+}
+
+.realEstate-box-right {
+  height: 87%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 3rem;
+}
+
+.upper-headline {
+  font-size: 2.2rem;
+  height: 54%;
+}
+
+.under-info-points {
+  font-size: 1.2rem;
+}
+
+.under-info-points ul li {
+  padding: 0.2rem 0;
+}
+
+/* main-middle-mid-section */
+
+
+.main-middle-mid-section {
+  grid-area: middle-mid-sec;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3rem;
+}
+
+/*main-middle-down-section  */
+
+.main-middle-down-section {
+  grid-area: mid-down-sec;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2rem 0rem 0rem 3rem;
+}
+
+.live-card {
+  background: var(--Primary-color);
+  position: relative;
+}
+.live-card::after{
+  position: absolute;
+  top: 1.2rem;
+  left: 1rem;
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: red;
+}
+
+.live-card::before{
+content: 'LIVE';
+color: white;
+text-align: center;
+padding: 1rem;
+font-weight: var(--primary-font-weight);
+font-size: var(--primary-font-size);
+position: absolute;
+top: 0;
+left: 0;
+background: black;
+width: 8rem;
+height: 3rem;
+}
+.vid-info{
+  width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.vid-info a{
+  color: var(--secondary-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-right-section {
+  grid-area: right-sec;
+  border: solid black 0.1rem;
+}
