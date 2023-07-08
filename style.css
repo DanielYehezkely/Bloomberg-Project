@@ -373,7 +373,7 @@ a {
   font-weight: var(--primary-font-weight);
 }
 
-/* main-middle-up-section */
+/* main-middle-up-section ----------------------------------------*/
 
 .main-middle-up-section {
   width: 100%;
@@ -407,7 +407,7 @@ a {
   padding: 0.2rem 0;
 }
 
-/* main-middle-mid-section */
+/* main-middle-mid-section ------------------------------------------- */
 
 
 .main-middle-mid-section {
@@ -418,7 +418,7 @@ a {
   padding-left: 3rem;
 }
 
-/*main-middle-down-section  */
+/*main-middle-down-section ----------------------------------------------- */
 
 .main-middle-down-section {
   grid-area: mid-down-sec;
@@ -444,7 +444,7 @@ a {
 
 .live-card::before{
 content: 'LIVE';
-color: white;
+color: var(--secondary-color);
 text-align: center;
 padding: 1rem;
 font-weight: var(--primary-font-weight);
@@ -452,7 +452,7 @@ font-size: var(--primary-font-size);
 position: absolute;
 top: 0;
 left: 0;
-background: black;
+background: var(--Primary-color);
 width: 8rem;
 height: 3rem;
 }
@@ -470,21 +470,7 @@ height: 3rem;
   color: var(--secondary-color);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Main - Right - Section ------------------------------------------ */
 
 .main-right-section {
   grid-area: right-sec;
