@@ -4,7 +4,10 @@
   --secondary-background-color: #1c1c1c;
   --hovering-grey: #c7c7bd;
   --primary-font-size: 1.4rem;
+  --secondary-font-size: 1.6rem;
   --primary-font-weight: 600;
-  --marker-color-negative:red;
   --primary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --marker-color-negative: red;
+  --marker-color-positive: green;
+  --marker-color-personality: rgb(0, 81, 255);
 }

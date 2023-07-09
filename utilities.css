@@ -28,25 +28,26 @@
   cursor: pointer;
 }
 
-.link-hovering:hover {
-  font-weight: var(--primary-font-weight);
+.economic-box {
+  width: 19%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 1.4rem;
+  cursor: pointer;
 }
 
-.economic-box {
-    width: 19%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem 1.4rem;
+.economic-box:hover {
+  opacity: 0.7;
 }
 
 .economic-box p {
-    position: relative;
+  position: relative;
 }
 
-.economic-box p::after{
-    content: "";
+.economic-box p::after {
+  content: "";
   position: absolute;
   border-style: solid;
   border-width: 0.7rem;
@@ -60,11 +61,22 @@
 .par-box {
   font-size: 1.9rem;
 }
-.underline-Hovering:hover{
+.underline-Hovering:hover {
   text-decoration: underline;
-  }
+}
 .markerRed {
   color: var(--marker-color-negative);
+}
+.markerGreen {
+  color: var(--marker-color-positive);
+}
+
+.markerBlue {
+  color: var(--marker-color-personality);
+}
+
+.bolding {
+  font-weight: bold;
 }
 
 .title-box {
@@ -77,7 +89,7 @@
   justify-content: flex-start;
   align-items: center;
   font-size: 2.6rem;
-  font-weight: normal ;
+  font-weight: normal;
 }
 
 .info-box {
@@ -88,31 +100,30 @@
   padding: 0.5rem 0;
 }
 
-.left-boxes-height{
+.left-boxes-height {
   height: 31%;
 }
 
-.middle-infoBoxes-margin-Height{
-height: 90%;
-margin-right: 3rem;
-
+.middle-infoBoxes-margin-Height {
+  height: 90%;
+  margin-right: 3rem;
 }
 
 .subTitle {
   width: 100%;
   font-weight: normal;
-  font-size: 1.4rem;
-  padding: 0.5rem 0 ;
+  font-size: var(--primary-font-size);
+  padding: 1rem 0;
 }
 
-.time-updater{
+.time-updater {
   font-size: 1.2rem;
   font-weight: normal;
   color: gray;
   padding-top: 0.5rem;
 }
 
-.dotted-bordering{
+.dotted-bordering {
   border-bottom: dotted var(--Primary-color) 0.1rem;
 }
 
@@ -125,7 +136,7 @@ margin-right: 3rem;
   height: 50%;
 }
 
-.card{
+.card {
   height: 28.5rem;
   width: 20rem;
   display: flex;
@@ -133,8 +144,19 @@ margin-right: 3rem;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
-.card-spacing{
-  margin-top: 1rem;
+.person-box {
+  border: none;
+  font-size: var(--secondary-font-size);
+  font-weight: 700;
+  line-height: 1;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  border-bottom: dotted var(--Primary-color) 0.1rem;
+}
+
+.personName {
+  font-size: var(--primary-font-size);
+  padding: 0.5rem 0;
 }

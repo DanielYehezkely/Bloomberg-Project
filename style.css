@@ -183,6 +183,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .menu-list li {
   text-align: center;
@@ -192,23 +193,49 @@ a {
   padding: 1rem 0.6rem;
 }
 
-.menu-list li:first-child {
+.menu-list li:hover {
+  font-weight: var(--primary-font-weight);
+}
+
+.menu-list li ul {
+  display: none;
+}
+
+.menu-list li ul li {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.menu-list li:hover ul {
+  display: flex;
+  border-bottom: solid var(--Primary-color) 1px;
+  position: absolute;
+  top: 4rem;
+  left: 0rem;
+  width: 122.8rem;
+  height: 35rem;
+  background: var(--secondary-color);
+  z-index: 10;
+}
+
+.menu-list .live-now-btn {
+  width: 9rem;
   position: relative;
   padding-left: 2rem;
 }
 
-.menu-list li:first-child::before {
+.menu-list .live-now-btn::before {
   content: "";
   position: absolute;
   background: var(--Primary-color);
   width: 0.8rem;
   height: 0.8rem;
   border-radius: 50%;
-  top: 1.7rem;
-  left: 1rem;
+  top: 0.3rem;
+  left: 1.5rem;
 }
 
-.menu-list li:last-child i {
+.menu-list .more-btn i {
   font-size: 1.8rem;
   padding-left: 1rem;
 }
@@ -227,16 +254,20 @@ a {
   font-size: var(--primary-font-size);
 }
 
+.box-3 span,
+.box-3 p::after {
+  border-color: transparent transparent var(--marker-color-positive);
+}
 .box-5 span,
 .box-5 p::after {
-  color: rgb(2, 138, 2);
-  border-color: transparent transparent green;
+  border-color: transparent transparent var(--marker-color-positive);
 }
 
 .box-6 {
   width: 6rem;
   height: 100%;
   position: relative;
+  cursor: pointer;
 }
 .arrow-slide {
   opacity: 0.8;
@@ -409,7 +440,6 @@ a {
 
 /* main-middle-mid-section ------------------------------------------- */
 
-
 .main-middle-mid-section {
   grid-area: middle-mid-sec;
   display: flex;
@@ -431,34 +461,34 @@ a {
   background: var(--Primary-color);
   position: relative;
 }
-.live-card::after{
+.live-card::after {
   position: absolute;
   top: 1.2rem;
   left: 1rem;
-  content: '';
+  content: "";
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
   background: red;
 }
 
-.live-card::before{
-content: 'LIVE';
-color: var(--secondary-color);
-text-align: center;
-padding: 1rem;
-font-weight: var(--primary-font-weight);
-font-size: var(--primary-font-size);
-position: absolute;
-top: 0;
-left: 0;
-background: var(--Primary-color);
-width: 8rem;
-height: 3rem;
+.live-card::before {
+  content: "LIVE";
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 1rem;
+  font-weight: var(--primary-font-weight);
+  font-size: var(--primary-font-size);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--Primary-color);
+  width: 8rem;
+  height: 3rem;
 }
-.vid-info{
+.vid-info {
   width: 100%;
-  height:100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -466,7 +496,7 @@ height: 3rem;
   padding-left: 1rem;
 }
 
-.vid-info a{
+.vid-info a {
   color: var(--secondary-color);
 }
 
@@ -474,5 +504,99 @@ height: 3rem;
 
 .main-right-section {
   grid-area: right-sec;
-  border: solid black 0.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 2rem;
+}
+
+.opinion-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.bloomberg-opinion h4 {
+  position: relative;
+}
+.bloomberg-opinion h4::after {
+  position: absolute;
+  content: "Opinion";
+  color: var(--marker-color-personality);
+  padding-left: 0.5rem;
+}
+
+.moreOpinion {
+  padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.sign-up-box {
+  display: grid;
+  grid-template-areas:
+    "sign-info-box sign-info-box"
+    "sign-info-box sign-info-box"
+    "email-box sign-up-btn"
+    "checkBox checkBox"
+    "checkBox checkBox"
+    "terms terms";
+  padding-top: 2rem;
+  gap: 1rem;
+}
+
+.sign-info-box {
+  grid-area: sign-info-box;
+}
+
+.email-box {
+  grid-area: email-box;
+  border: none;
+  border-bottom: solid var(--Primary-color) 0.1rem;
+  height: 3.1rem;
+  width: 14rem;
+}
+
+.sign-up-btn {
+  grid-area: sign-up-btn;
+  width: 13.5rem;
+  height: 3.6rem;
+  background: transparent;
+  border: solid 0.1rem var(--Primary-color);
+  font-weight: 700;
+  font-size: var(--primary-font-size);
+  cursor: pointer;
+}
+
+.sign-up-btn:hover {
+  background: #eeeeeb;
+}
+
+.check-Box {
+  grid-area: checkBox;
+  display: flex;
+}
+.check-Box span {
+  font-size: 1.2rem;
+  opacity: 0.7;
+  padding-left: 1rem;
+}
+.check-Box input {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.1rem;
+  cursor: pointer;
+}
+
+.terms-box {
+  grid-area: terms;
+  font-size: 1.2rem;
+}
+
+.terms-box span {
+  opacity: 0.7;
+}
+
+.terms-box a {
+  text-decoration: underline;
+  color: var(--Primary-color);
 }
